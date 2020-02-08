@@ -4,6 +4,7 @@
             <div class="form-control">
                 <input type="text"
                        name="title"
+                       data-cy-post-title
                        v-model="post.title">
             </div>
 
@@ -11,12 +12,13 @@
                 <textarea name="body"
                       cols="30"
                       rows="10"
+                          data-cy-post-body
                       v-model="post.body"></textarea>
             </div>
-            <input type="submit" value="Submit">
+            <input data-cy-submit type="submit" value="Submit">
         </form>
 
-        <h2 v-if="success">{{feedbackMessage}}</h2>
+        <h2 v-if="success" data-cy-feedback-message>{{feedbackMessage}}</h2>
     </div>
 </template>
 
